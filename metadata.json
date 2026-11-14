@@ -1,0 +1,6 @@
+{
+  "name": "Conservatory Sight-Reading Trainer",
+  "description": "Interactive music sight-reading trainer with custom SVG staff notation, structured curriculum levels, adaptive spaced repetition, piano & solfege inputs, Web MIDI, and real-time microphone pitch detection.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
