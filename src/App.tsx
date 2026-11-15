@@ -19,6 +19,7 @@ import { RhythmTrainerView } from './components/RhythmTrainerView';
 import { IntervalTrainerView } from './components/IntervalTrainerView';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { ExerciseLessonCard } from './components/ExerciseLessonCard';
+import { PWAInstallButton, OfflineIndicator } from './components/PWAInstallButton';
 import { audioEngine } from './services/audioEngine';
 import {
   defaultProgressState,
@@ -583,8 +584,10 @@ export default function App() {
           </span>
         </div>
 
-        {/* Right/End: Compact Action Pills (Unlock All, Mute, Language) */}
+        {/* Right/End: Compact Action Pills (PWA Install, Unlock All, Mute, Language) */}
         <div className="flex items-center gap-1.5">
+          <PWAInstallButton lang={lang} />
+
           <button
             type="button"
             onClick={() => {
@@ -637,6 +640,8 @@ export default function App() {
           </button>
         </div>
       </header>
+
+      <OfflineIndicator lang={lang} />
 
       {/* MAIN VIEWPORT AREA (FITS PHONE SCREEN CLEANLY) */}
       <main className="flex-1 overflow-y-auto w-full max-w-5xl mx-auto px-3 sm:px-6 py-3 sm:py-5">
